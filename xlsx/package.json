@@ -1,0 +1,16 @@
+{
+  "name": "xlsx",
+  "version": "0.1.0",
+  "description": "to make the processing of the file easer the headers from the file we transformed the headers.",
+  "type": "module",
+  "main": "import.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ff6347 <hash@ff6347.email>",
+  "license": "MIT",
+  "dependencies": {
+    "postgres": "3.3.5"
+  }
+}
