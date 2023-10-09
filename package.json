@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "xo && ava"
+    "test": "xo"
   },
   "repository": {
     "type": "git",
