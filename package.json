@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "description": "![](https://img.shields.io/badge/Built%20with%20%E2%9D%A4%EF%B8%8F-at%20Technologiestiftung%20Berlin-blue)",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "xo && ava"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,14 @@
   "homepage": "https://github.com/technologiestiftung/challenge-datenmangement-excel-tooling#readme",
   "devDependencies": {
     "@technologiestiftung/semantic-release-config": "1.2.4",
-    "semantic-release": "22.0.5"
+    "ava": "5.3.1",
+    "semantic-release": "22.0.5",
+    "xo": "0.56.0"
+  },
+  "dependencies": {
+    "fastify": "4.23.2"
+  },
+  "xo": {
+    "prettier": false
   }
 }
