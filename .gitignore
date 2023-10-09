@@ -275,3 +275,4 @@ cython_debug/
 xlsx/*.csv
 .vscode
 *.code-workspace
+xlsx/general_overview.json
