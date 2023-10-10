@@ -3,3 +3,9 @@
 GET http://localhost:54321/rest/v1/general_overview
 apikey: "{{$token}}"
 Authorization: "Bearer {{$token}}"
+
+###
+
+GET http://localhost:54321/rest/v1/user_profiles
+apikey: "{{$token}}"
+Authorization: "Bearer {{$token}}"
