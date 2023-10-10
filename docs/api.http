@@ -1,0 +1,5 @@
+@token = {{$processEnv %SUPABASE_ANON_KEY}}
+###
+GET http://localhost:54321/rest/v1/general_overview
+apikey: "{{$token}}"
+Authorization: "Bearer {{$token}}"
