@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/technologiestiftung/challenge-datenmangement-excel-tooling/compare/v1.1.0...v1.2.0) (2023-10-10)
+
+
+### Features
+
+* Make overview table not public ([5593b75](https://github.com/technologiestiftung/challenge-datenmangement-excel-tooling/commit/5593b753a6d0e6470c88a183c9b7723cf4dded73))
+
 # [1.1.0](https://github.com/technologiestiftung/challenge-datenmangement-excel-tooling/compare/v1.0.0...v1.1.0) (2023-10-09)
 
 
