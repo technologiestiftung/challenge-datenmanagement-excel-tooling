@@ -28,6 +28,9 @@
     "fastify": "4.23.2"
   },
   "xo": {
-    "prettier": false
+    "prettier": false,
+    "ignores": [
+      "frontend/**"
+    ]
   }
 }
