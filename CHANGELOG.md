@@ -1,3 +1,16 @@
+# [1.3.0](https://github.com/technologiestiftung/challenge-datenmangement-excel-tooling/compare/v1.2.0...v1.3.0) (2023-10-13)
+
+
+### Bug Fixes
+
+* **schema:** Add remote changes to migrations ([17d817e](https://github.com/technologiestiftung/challenge-datenmangement-excel-tooling/commit/17d817e87b36a142137bb947284c07303e998640))
+
+
+### Features
+
+* add first frontend draft ([9dbbb8b](https://github.com/technologiestiftung/challenge-datenmangement-excel-tooling/commit/9dbbb8b8a74f1a07e1400a309fe0fef8dc8d4e08))
+* **db types:** Add DB schema as types ([f351fd2](https://github.com/technologiestiftung/challenge-datenmangement-excel-tooling/commit/f351fd26e83252851244b6f46bde4b2bd1e2e179))
+
 # [1.2.0](https://github.com/technologiestiftung/challenge-datenmangement-excel-tooling/compare/v1.1.0...v1.2.0) (2023-10-10)
 
 
