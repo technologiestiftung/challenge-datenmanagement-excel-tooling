@@ -277,3 +277,4 @@ xlsx/*.csv
 *.code-workspace
 xlsx/general_overview.json
 !xlsx/gesamtuebersicht-sample.xlsx
+scripts/playground.ts
