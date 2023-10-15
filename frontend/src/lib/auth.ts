@@ -1,20 +1,5 @@
 import {supabaseClient} from "@/lib/supabaseClient";
 
-export async function isLoggedIn() {
-  const {data, error} = await supabaseClient.auth.getSession();
-
-  if (error) {
-    console.error(error);
-    return false;
-  }
-
-  if (!data || !data.session) {
-    return false;
-  }
-
-  return true;
-}
-
 export async function login() {
   console.log('onLogin');
 
