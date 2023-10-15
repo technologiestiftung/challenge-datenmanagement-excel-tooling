@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/technologiestiftung/challenge-datenmangement-excel-tooling/compare/v1.3.0...v1.4.0) (2023-10-15)
+
+
+### Features
+
+* added visual clue to show when updates are triggered, reworked realtime subscription as single useSyncExternalStore hook instead of multiple useEffects ([9121b6b](https://github.com/technologiestiftung/challenge-datenmangement-excel-tooling/commit/9121b6b931fb9e8ad06996e231b9f503f43583e0))
+
 # [1.3.0](https://github.com/technologiestiftung/challenge-datenmangement-excel-tooling/compare/v1.2.0...v1.3.0) (2023-10-13)
 
 
