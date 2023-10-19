@@ -47,7 +47,7 @@ const headers = [
 	'datenqualitaet',
 ];
 
-const rangeString = 'A1:O1';
+const rangeString = 'A1:N1';
 
 // function generateShortUUID(): string {
 //   return "xxxxxxxx".replace(/[xy]/g, function (c) {
