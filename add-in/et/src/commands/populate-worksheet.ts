@@ -13,11 +13,7 @@
 //       copies are not affected
 // - [ ] copy should also protect the columns `id` and `user_id`
 
-const SUPABASE_URL = 'https://vtjpdxufdfjdtcezgtvc.supabase.co';
-const SUPABASE_SERVICE_ROLE_KEY =
-	'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ0anBkeHVmZGZqZHRjZXpndHZjIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5NjU5ODM1MywiZXhwIjoyMDEyMTc0MzUzfQ.SUOdYGv5f47A3ruyPvWMKZXmBz1sM0l0QdPUZUQiE4I';
-
-interface Entry {
+export interface Entry {
 	ansprechperson_bezirksebene: string | undefined;
 	ansprechperson_landesebene: string | undefined;
 	beschreibung: string | undefined;
@@ -30,26 +26,26 @@ interface Entry {
 	raeumlicher_bezug: string | undefined;
 	thema: string | undefined;
 	typ: string | undefined;
-	user_id: string | undefined;
+	user_id: string | undefined | null;
 	verantwortlichkeit_bezirksebene: string | undefined;
 	verantwortlichkeit_landesebene: string | undefined;
 }
 
 const headers = [
 	'id',
-	'ansprechperson_bezirksebene',
-	'ansprechperson_landesebene',
-	'beschreibung',
-	'dateiformat',
-	'datenhoheit_bei',
-	'datenqualitaet',
-	'datensatz_titel',
-	'it_fachverfahren',
-	'raeumlicher_bezug',
 	'thema',
 	'typ',
+	'datensatz_titel',
+	'beschreibung',
+	'raeumlicher_bezug',
 	'verantwortlichkeit_bezirksebene',
+	'ansprechperson_bezirksebene',
 	'verantwortlichkeit_landesebene',
+	'ansprechperson_landesebene',
+	'datenhoheit_bei',
+	'it_fachverfahren',
+	'dateiformat',
+	'datenqualitaet',
 	'user_id',
 ];
 
@@ -77,16 +73,27 @@ function generate2DArray(entries: Entry[], headers: string[]) {
 	return values;
 }
 
-export default async function main() {
+export async function populateWorksheet({
+	userToken,
+	supabaseUrl,
+	supabaseAnonKey,
+}: {
+	userToken: string;
+	supabaseUrl: string;
+	supabaseAnonKey: string;
+}) {
 	try {
 		await Excel.run(async (context) => {
-			const response = await fetch(`${SUPABASE_URL}/rest/v1/general_overview`, {
-				headers: {
-					apikey: `${SUPABASE_SERVICE_ROLE_KEY}`,
-					authorization: `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
+			const response = await fetch(
+				`${supabaseUrl}/rest/v1/general_overview?order=id`,
+				{
+					headers: {
+						apikey: `${supabaseAnonKey}`,
+						authorization: `Bearer ${userToken}`,
+					},
+					method: 'GET',
 				},
-				method: 'GET',
-			});
+			);
 			if (!response.ok) {
 				throw new Error(response.statusText);
 			}

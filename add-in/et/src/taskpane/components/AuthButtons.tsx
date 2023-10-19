@@ -7,15 +7,20 @@ import { Session } from '@supabase/gotrue-js';
 
 export default function AuthButtons({
 	session,
+	setSession,
 	email,
 	password,
 }: {
 	email: string;
 	password: string;
 	session: Session | null | undefined;
+	setSession: React.Dispatch<React.SetStateAction<Session | null | undefined>>;
 }) {
 	async function handleLogin() {
-		login({ email, password });
+		login({ email, password, setSession });
+	}
+	async function handleLogout() {
+		logout(setSession);
 	}
 
 	if (session === undefined) {
@@ -35,7 +40,7 @@ export default function AuthButtons({
 	}
 
 	return (
-		<Button className="btn" onClick={logout}>
+		<Button className="btn" onClick={handleLogout}>
 			LOG OUT
 		</Button>
 	);
