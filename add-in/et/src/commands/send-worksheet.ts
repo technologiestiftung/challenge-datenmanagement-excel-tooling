@@ -13,7 +13,6 @@ import { Entry } from './populate-worksheet';
 // - [x] we make a copy for the user.
 //       Updates only happen to the original sheet
 //       copies are not affected
-// - [ ] copy should also protect the columns `id` and `user_id`
 
 export async function tableToJson(
 	table: Excel.Table,
@@ -46,12 +45,10 @@ export async function sendWorksheet({
 	userToken,
 	supabaseUrl,
 	supabaseAnonKey,
-	user_id,
 }: {
 	userToken: string;
 	supabaseUrl: string;
 	supabaseAnonKey: string;
-	user_id: string;
 }) {
 	try {
 		await Excel.run(async (context) => {
@@ -77,10 +74,6 @@ export async function sendWorksheet({
 				const data = (await tableToJson(table, context)) as Entry[];
 				console.log(data);
 				// This is a temporary fix since we dont have user_ids yet
-
-				data.forEach((item: { user_id: string | undefined | null }) => {
-					item.user_id = user_id;
-				});
 
 				const response = await fetch(
 					`${supabaseUrl}/rest/v1/general_overview`,

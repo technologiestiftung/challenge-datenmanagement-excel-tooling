@@ -26,7 +26,6 @@ export interface Entry {
 	raeumlicher_bezug: string | undefined;
 	thema: string | undefined;
 	typ: string | undefined;
-	user_id: string | undefined | null;
 	verantwortlichkeit_bezirksebene: string | undefined;
 	verantwortlichkeit_landesebene: string | undefined;
 }
@@ -46,7 +45,6 @@ const headers = [
 	'it_fachverfahren',
 	'dateiformat',
 	'datenqualitaet',
-	'user_id',
 ];
 
 const rangeString = 'A1:O1';

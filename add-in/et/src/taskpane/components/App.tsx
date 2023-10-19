@@ -82,7 +82,6 @@ const App: React.FC<AppProps> = ({ title, isOfficeInitialized }) => {
 					supabaseUrl: SUPABASE_URL,
 					supabaseAnonKey: SUPABASE_ANON_KEY,
 					userToken: session.access_token,
-					user_id: session.user.id,
 				});
 			} else {
 				throw new UserError('No session', 'no-session');
