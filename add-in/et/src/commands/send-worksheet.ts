@@ -98,11 +98,14 @@ export async function sendWorksheet({
 					await context.sync();
 					return { success: false, message };
 				}
-			} catch (e) {
+			} catch (e: unknown) {
 				console.log(e);
 				await context.sync();
-
-				return { success: false, message: e.message };
+				if (e instanceof Error) {
+					return { success: false, message: e.message };
+				} else {
+					return { success: false, message: 'unknown error' };
+				}
 			}
 		});
 	} catch (e: unknown) {
