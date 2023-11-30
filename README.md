@@ -37,14 +37,20 @@ supabase db push
 
 Execute the populate-worksheet.ts script to populate the worksheet with data from the database. Execute the send-worksheet.ts script to send the worksheet to the database.
 
+### Frontend
+
+In the folder [/frontend](/frontend/) you will find a Next.js application where you can watch the changes made to the database in realtime. Follow the README.md in that folder to learn how to set it up and connect it to your database.
 
 
 ## Development
 
+- We use [direnv](https://github.com/direnv/direnv) to setup environment variables. You can use the `.envrc.example` file as a template for your own `.envrc` file.
 - Here are some resources for learning about office scripts.
 - https://learn.microsoft.com/en-us/office/dev/scripts/overview/excel
 
 You will have to edit and develop the scripts within Excel. There seems to be no way to use an external editor.
+
+In the folder [xlsx](/xlsx/) you will find a sample Excel file that you can use to test the office-scripts and a script [/xlsx/import.js](/xlsx/import.js) that you can use to populate the database. See the [/xlsx/README.md](/xlsx/README.md) for more information.
 
 
 ## Contributing
