@@ -20,7 +20,7 @@ export default defineConfig(async ({ mode }) => ({
 		react(),
 		eslint(),
 		officeAddin({
-			devUrl: 'https://localhost:3000',
+			devUrl: 'https://localhost:8080',
 			prodUrl: 'https://www.contoso.com', // CHANGE THIS TO YOUR PRODUCTION DEPLOYMENT LOCATION
 		}),
 	],
@@ -40,5 +40,6 @@ export default defineConfig(async ({ mode }) => ({
 		outDir: '../dist',
 		emptyOutDir: true,
 	},
-	server: mode !== 'production' ? { https: await getHttpsOptions() } : {},
+	server:
+		mode !== 'production' ? { https: await getHttpsOptions(), port: 8080 } : {},
 }));

@@ -278,3 +278,6 @@ xlsx/*.csv
 xlsx/general_overview.json
 !xlsx/gesamtuebersicht-sample.xlsx
 scripts/playground.ts
+Possibilities for Excel as Database.mindnode/*
+video/*
+*.mp4
