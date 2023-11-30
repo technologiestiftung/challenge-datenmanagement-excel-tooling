@@ -6,60 +6,46 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-# {repo-template}
+# Data Management Excel Tooling
 
-## TODO (after you generated the repo)
+This repository contains proof of concept code for explorations of how to use Excel as a data management tool. The premise is that we try to use Excel as the interface to data base. Since Excel is a already well known tool in the administration.
 
-- [ ] Review the content of the README.md and adjust to your liking
-- [ ] Read the README.md till the end and adjust the content licensing,
-      logos, etc (I know you stopped at tbd...)
-- [ ] Adjust the file [.github/CODEOWNERS](./.github/CODEOWNERS)
-- [ ] Adjust the files under [.github/ISSUE_TEMPLATE](./.github/ISSUE_TEMPLATE)
-- [ ] If you use staging and main branches use this template for [.github/renovate.json](./.github/renovate.json)
-
-```json
-{
-	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": ["github>technologiestiftung/renovate-config"],
-	"baseBranches": ["staging"]
-}
-```
-
-- [ ] Do you want to honor all kinds of contributions? Use [all-contributors](https://allcontributors.org/)
-
-```bash
-npx all-contributors-cli check
-npx all-contributors-cli add ff6347 doc
-```
-
-You can use it on GitHub just by commenting on PRs and issues:
-
-```plain
-@all-contributors please add @ff6347 for infrastructure, tests and code
-```
-
-- [ ] Add your project description
-- [ ] Get fancy shields at https://shields.io
+See also the subfolder [/add-in/et/](/add-in/et/) for a proof of concept for an Excel add-in that can be used to manage data in a database. This is actually the more promising way to handle this. It allows to have a more fine grained method of user authorization and allows to use modern web development tools to build the interface. The example add-in you can find there is the same as the scripts under /office-scripts/ but with a more modern interface.
 
 ## Prerequisites
 
-tbd...
+- Office 365 License
+- optional Sharepoint
+- Supabase Account
+- Node.js
 
-## Installation
 
-tbd...
+## Usage
 
-## Usage or Deployment
+- Create a project on supabase and get your project id, supbase api  url and service role key
+- Use the supabase CLI to deploy the local migrations to supabase.com
 
-tbd...
+```bash
+supabase login
+supabase link --project-ref <YOUR SB ID>
+supabase db push
+```
+
+- Populate the database with some data
+- Add your service role key and supabase url to the top of the scripts in `/office-scripts/populate-worksheet.ts` and `/office-scripts/send-worksheet.ts`.
+- Open a blank Excel workbook and add the scripts to the workbook automate ribbon as new scripts
+
+Execute the populate-worksheet.ts script to populate the worksheet with data from the database. Execute the send-worksheet.ts script to send the worksheet to the database.
+
+
 
 ## Development
 
-tbd...
+- Here are some resources for learning about office scripts.
+- https://learn.microsoft.com/en-us/office/dev/scripts/overview/excel
 
-## Tests
+You will have to edit and develop the scripts within Excel. There seems to be no way to use an external editor.
 
-tbd...
 
 ## Contributing
 
@@ -84,11 +70,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
-## Content Licensing
-
-Texts and content available as [CC BY](https://creativecommons.org/licenses/by/3.0/de/).
-
-Illustrations by {MARIA_MUSTERFRAU}, all rights reserved.
 
 ## Credits
 
@@ -118,4 +99,3 @@ Illustrations by {MARIA_MUSTERFRAU}, all rights reserved.
   </tr>
 </table>
 
-## Related Projects
