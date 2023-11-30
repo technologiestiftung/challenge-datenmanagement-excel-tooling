@@ -24,13 +24,13 @@
     "semantic-release": "22.0.5",
     "xo": "0.56.0"
   },
-  "dependencies": {
-    "fastify": "4.23.2"
-  },
   "xo": {
     "prettier": false,
     "ignores": [
       "frontend/**"
     ]
+  },
+  "dependencies": {
+    "postgres": "3.4.3"
   }
 }
