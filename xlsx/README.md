@@ -6,7 +6,7 @@ to make the processing of the file easer the headers from the file we transforme
 - Replace all `[ä,ö,ü]` with `[ae,oe,ue]`
 - Make all lower case
 
-We used office script to convert the file `Gesamtübersicht von SenASGIVA Abteilung III.xlsx` to JSON.
+We used office script to convert the file `gesamtuebersicht-sample.xlsx` to JSON.
 
 ```ts
 interface TableData {
@@ -46,4 +46,15 @@ function main(workbook: ExcelScript.Workbook): TableData[] {
         return data;
     }
 }
+```
+
+## Import to DB
+
+Fill the .envrc.sample with your credentials and rename it to .envrc.
+
+
+```bash
+direnv allow
+npm ci
+node import.js
 ```
