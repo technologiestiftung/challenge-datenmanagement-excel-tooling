@@ -1,7 +1,7 @@
 This is a simple frontend that displays real time changes of a supabase database in a table.
 Users need to log in with a Microsoft account before they'll be shown the data.
-The Auth-Flow is handled by supabase, it uses OAuth2 with Azure as Provider.
-After logging in, the data can also be downloaded as Excel-File.
+The Auth-Flow is handled by supabase, it uses OAuth2 with Azure as provider.
+After logging in, the data can also be downloaded as Excel file.
 
 ## Getting Started
 
