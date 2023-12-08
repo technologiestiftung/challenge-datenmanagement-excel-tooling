@@ -1,10 +1,6 @@
 {
-	"name": "office-addin-react-vite-template",
+	"name": "@technologiestiftung/datenmanagement-addin",
 	"version": "1.0.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/ExtraBB/Office-Addin-React-Vite-Template.git"
-	},
 	"license": "MIT",
 	"config": {
 		"app_to_debug": "excel",

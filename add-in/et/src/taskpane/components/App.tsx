@@ -127,7 +127,7 @@ const App: React.FC<AppProps> = ({ title, isOfficeInitialized }) => {
 					<div className="flex-container">
 						<div className="flex items-center space-x-2">
 							<Label htmlFor="email" className="w-20">
-								Email
+								E-Mail
 							</Label>
 							<Input
 								type="email"
@@ -139,7 +139,7 @@ const App: React.FC<AppProps> = ({ title, isOfficeInitialized }) => {
 					<div className="flex-container">
 						<div className="flex items-center space-x-2">
 							<Label htmlFor="password" className="w-20">
-								Password
+								Passwort
 							</Label>
 							<Input
 								type="password"
@@ -162,15 +162,15 @@ const App: React.FC<AppProps> = ({ title, isOfficeInitialized }) => {
 			<Separator className="my-4" />
 			<div className="flex-container">
 				<Button className="w-full" onClick={populate}>
-					Populate worksheet
+					Datenblatt befüllen
 				</Button>
 
 				<Button className="w-full" onClick={() => undefined}>
-					Validate worksheet
+					Datenblatt validieren
 				</Button>
 
 				<Button className="w-full" onClick={send}>
-					Send worksheet
+					Datenblatt senden
 				</Button>
 			</div>
 		</>

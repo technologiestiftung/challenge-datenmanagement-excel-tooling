@@ -21,7 +21,7 @@ export default defineConfig(async ({ mode }) => ({
 		eslint(),
 		officeAddin({
 			devUrl: 'https://localhost:8080',
-			prodUrl: 'https://www.contoso.com', // CHANGE THIS TO YOUR PRODUCTION DEPLOYMENT LOCATION
+			prodUrl: 'https://www.citylab-berlin.org', // CHANGE THIS TO YOUR PRODUCTION DEPLOYMENT LOCATION
 		}),
 	],
 	resolve: {

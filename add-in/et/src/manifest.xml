@@ -5,15 +5,15 @@
   xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
   <Id>e2ba5494-084d-4364-b503-fad0e6a1b8ae</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>Contoso</ProviderName>
-  <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Office Addin Task Pane React Vite"/>
-  <Description DefaultValue="A template to get started."/>
+  <ProviderName>Citylab Berlin</ProviderName>
+  <DefaultLocale>de-DE</DefaultLocale>
+  <DisplayName DefaultValue="Datenmanagement Add In"/>
+  <Description DefaultValue="Dateninventur leicht gemacht"/>
   <IconUrl DefaultValue="https://localhost:8080/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://localhost:8080/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://www.contoso.com/help"/>
+  <SupportUrl DefaultValue="https://www.citylab-berlin.org"/>
   <AppDomains>
-    <AppDomain>https://www.contoso.com</AppDomain>
+    <AppDomain>https://www.citylab-berlin.org</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Workbook"/>
@@ -75,13 +75,13 @@
         <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:8080/taskpane/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GetStarted.Title" DefaultValue="Get started with your sample add-in!"/>
+        <bt:String id="GetStarted.Title" DefaultValue="Leg los mit deinen Daten!"/>
         <bt:String id="CommandsGroup.Label" DefaultValue="Commands Group"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Show Taskpane"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Datenmanagement"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="Your sample add-in loaded succesfully. Go to the HOME tab and click the 'Show Taskpane' button to get started."/>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to Show a Taskpane"/>
+        <bt:String id="GetStarted.Description" DefaultValue="Dein Beispiel-Add-In wurde erfolgreich geladen. Gehe zum Register HOME und klicke auf die Schaltfläche 'Taskpane anzeigen', um loszulegen."/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Klicke, um eine Taskleiste anzuzeigen."/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

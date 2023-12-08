@@ -26,7 +26,7 @@ export default function AuthButtons({
 	if (session === undefined) {
 		return (
 			<Button className="btn btn-disabled" onClick={handleLogin}>
-				LOADING...
+				Lade...
 			</Button>
 		);
 	}
@@ -34,14 +34,14 @@ export default function AuthButtons({
 	if (session === null) {
 		return (
 			<Button className="btn" onClick={handleLogin}>
-				LOG IN
+				Einloggen
 			</Button>
 		);
 	}
 
 	return (
 		<Button className="btn" onClick={handleLogout}>
-			LOG OUT
+			Ausloggen
 		</Button>
 	);
 }

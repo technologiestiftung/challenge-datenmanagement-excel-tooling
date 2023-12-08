@@ -10,7 +10,7 @@ initializeIcons();
 
 let isOfficeInitialized = false;
 
-const title = 'ET Add-in';
+const title = 'Datenmanagement Add-in';
 
 const render = (Component: typeof App) => {
 	createRoot(document.getElementById('app') as HTMLElement).render(
