@@ -281,3 +281,6 @@ scripts/playground.ts
 */Possibilities for Excel as Database.mindnode/*
 video/*
 *.mp4
+
+# WebStorm
+.idea
