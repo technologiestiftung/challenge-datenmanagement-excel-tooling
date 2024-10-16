@@ -21,8 +21,8 @@
   "devDependencies": {
     "@technologiestiftung/semantic-release-config": "1.2.4",
     "ava": "5.3.1",
-    "semantic-release": "22.0.5",
-    "xo": "0.56.0"
+    "semantic-release": "22.0.12",
+    "xo": "0.59.3"
   },
   "xo": {
     "prettier": false,
