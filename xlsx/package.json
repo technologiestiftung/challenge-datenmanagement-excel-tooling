@@ -11,6 +11,6 @@
   "author": "ff6347 <hash@ff6347.email>",
   "license": "MIT",
   "dependencies": {
-    "postgres": "3.3.5"
+    "postgres": "3.4.4"
   }
 }
