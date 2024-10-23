@@ -40,14 +40,14 @@
 		"@types/office-runtime": "^1.0.23",
 		"@types/react": "^18.0.28",
 		"@types/react-dom": "^18.0.11",
-		"@typescript-eslint/eslint-plugin": "^5.57.1",
-		"@typescript-eslint/parser": "^5.57.1",
+		"@typescript-eslint/eslint-plugin": "^8.0.0",
+		"@typescript-eslint/parser": "^8.0.0",
 		"@vitejs/plugin-react-swc": "^3.0.0",
 		"autoprefixer": "10.4.16",
-		"eslint": "^8.38.0",
-		"eslint-plugin-office-addins": "^2.1.5",
+		"eslint": "^9.0.0",
+		"eslint-plugin-office-addins": "^3.0.0",
 		"eslint-plugin-prettier": "5.0.1",
-		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-react-hooks": "^5.0.0",
 		"eslint-plugin-react-refresh": "^0.3.4",
 		"office-addin-cli": "^1.5.5",
 		"office-addin-debugging": "^5.0.5",
@@ -60,7 +60,7 @@
 		"typescript": "^5.0.2",
 		"vite": "^4.3.2",
 		"vite-plugin-eslint": "^1.8.1",
-		"vite-plugin-office-addin": "^1.0.0"
+		"vite-plugin-office-addin": "^2.0.0"
 	},
 	"prettier": {
 		"tabWidth": 2,
